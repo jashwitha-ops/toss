@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>toss</title>
+        <style>
+            body{
+               background-image: url(background.jpeg);
+                background-attachment: fixed;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;   /* full viewport height */
+                margin: 0;
+
+                .coin{
+                    text-align: center;
+                }
+
+                .coin button{
+                    font-size: 2rem;        /* scalable text size */
+                    padding: 15px 40px;     /* bigger button */
+                    border-radius: 10px;    /* rounded corners */
+                    border: none;
+                    background-color: #a396d0; /* nice green */
+                    color: rgb(116, 9, 89);
+                    cursor: pointer;
+                }
+                
+                .coin button:hover{
+                    background-color:aquamarine;
+                }
+
+                @media (max-width: 600px) {
+            .toss {
+                font-size: 1.5rem;
+                padding: 12px 30px;
+                 }
+        }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="coin">
+           <button  onclick="
+              let computermove=' ';
+              const random = Math.random();
+              if(random>=0 && random<0.5)
+              {
+                computermove = 'head';
+              }
+              else
+              {
+                computermove = 'tails';
+              }
+              alert(computermove);
+              ">TOSS</button>
+        </div>
+    </body>
+</html>
