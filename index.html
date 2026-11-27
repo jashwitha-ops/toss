@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>toss</title>
@@ -10,6 +11,7 @@
                 background-position: center;
 
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 height: 100vh;   /* full viewport height */
@@ -17,16 +19,30 @@
 
                 .coin{
                     text-align: center;
+                    display: block;
                 }
 
                 .coin button{
-                    font-size: 6rem;        /* scalable text size */
+                    font-size: 4rem;        /* scalable text size */
                     padding: 15px 40px;     /* bigger button */
                     border-radius: 10px;    /* rounded corners */
                     border: none;
                     background-color: #a396d0; /* nice green */
                     color: rgb(116, 9, 89);
                     cursor: pointer;
+                }
+
+                p{
+                    font-size: 30px;
+                }
+
+                .reset{
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .divv{
+                    display:block;
                 }
                 
                 .coin button:hover{
@@ -49,14 +65,25 @@
               const random = Math.random();
               if(random>=0 && random<0.5)
               {
-                computermove = 'head';
+                computermove = 'HEAD';
+                
               }
               else
               {
-                computermove = 'tails';
+                computermove = 'TAILS';
+
               }
-              alert(computermove);
+              document.querySelector('p').innerHTML=`${computermove}`;
+             
               ">TOSS</button>
+              
         </div>
+        <div class="divv">
+            <p></p>
+              <button class="reset"
+              onclick="
+               document.querySelector('p').innerHTML='';">RESET</button>
     </body>
+        </div>
+              
 </html>
